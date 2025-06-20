@@ -32,11 +32,5 @@ pipeline {
                 bat 'dotnet test'
             }
         }
-        
-        stage('Debug Branch Name') {
-            steps {
-                echo "Current branch is: ${env.BRANCH_NAME}"
-            }
-        }
     }
 }
