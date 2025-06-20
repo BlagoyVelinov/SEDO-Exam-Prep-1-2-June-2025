@@ -1,5 +1,5 @@
 def isTargetBranch() {
-    return env.BRANCH_NAME == 'origin/main' || env.BRANCH_NAME == 'origin/develop'
+    return env.BRANCH_NAME == 'main' || env.BRANCH_NAME == 'develop'
 }
 
 pipeline {
@@ -30,6 +30,12 @@ pipeline {
             }
             steps {
                 bat 'dotnet test'
+            }
+        }
+        
+        stage('Debug Branch Name') {
+            steps {
+                echo "Current branch is: ${env.BRANCH_NAME}"
             }
         }
     }
