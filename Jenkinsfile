@@ -1,5 +1,5 @@
 def isTargetBranch() {
-    return env.BRANCH_NAME == 'origin/main' || env.BRANCH_NAME == 'origin/feature'
+    return env.BRANCH_NAME == 'origin/main' || env.BRANCH_NAME == 'origin/develop'
 }
 
 pipeline {
