@@ -2,7 +2,9 @@ name: Build the app and run the tests
 
 on:
   push:
-    branches: [ "feature", "develop" ]
+    branches: 
+      - develop
+      - 'feature/**'
 
 jobs:
   build_and_testing:
